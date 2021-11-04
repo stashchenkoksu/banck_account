@@ -1,0 +1,28 @@
+<h2 class="d-flex justify-content-center mt-4 ">Transfer</h2>
+<h3 class="d-flex justify-content-center mt-4 ">Choose user and currency for deposition</h3>
+
+<div class='form form-group'>
+<%= simple_form_for :transfer do |f| %>
+  <div class='form-group'>
+    <label for='identify_number_sender '>Sender identify number</label>
+    <%= f.input :identify_number_sender, label: false, class: 'form-control' %>
+  </div>
+
+   <div class='form-group'>
+      <label for='identify_number_recipient '>Recipient identify number</label>
+      <%= f.input :identify_number_recipient, label: false, class: 'form-control' %>
+    </div>
+
+   <label for='identify_number'>Currency</label>
+     <%= f.input :currency , label: false, class: 'form-control' do %>
+       <%= f.select :currency, CURRENCY %>
+     <% end %>
+
+  <div class='form-group'>
+    <label for='amount'>Amount</label>
+    <%= f.input :amount, label: false, class: 'form-control',  as: :numeric, min: 0 %>
+  </div>
+
+  <%= f.button :submit, 'Transfer', class: 'btn btn-outline-info btn-sm mt-3' %>
+<% end %>
+</div>

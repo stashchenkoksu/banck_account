@@ -1,0 +1,22 @@
+<hr>
+<dl class='row'>
+  <dt class='col-sm-1'>Name: </dt>
+  <dd class='col-sm-2'><%= user.full_name %></dd>
+
+   <dt class='col-sm-1'>ID: </dt>
+    <dd class='col-sm-2'><%= user.identify_number %></dd>
+
+  <dt class='col-sm-2'>Amount of account:</dt>
+  <dd class='col-sm-1'><%= user.accounts.count%></dd>
+
+  <dt class='col-sm-1'>Tags</dt>
+  <dd class='col-sm-1'>
+    <%user.tags.each do |tag| %>
+      <%= link_to "#{tag.title}", users_path(tag: tag.title), class: 'btn btn-sm' %>
+     <% end %>
+  </dd>
+
+  <dd></dd>
+  <dt class='col-sm-2'> <%= link_to 'Learn more', user_accounts_path(user), class: 'btn btn-outline-secondary btn-sm' %></dt>
+  <dd class='col-sm-2'> <%= link_to 'Edit user', edit_user_path(user), class: 'btn btn-outline-secondary btn-sm' %></dd>
+</dl>

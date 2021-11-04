@@ -1,0 +1,23 @@
+<h2 class="d-flex justify-content-center mt-4 ">Deposit</h2>
+<h3 class="d-flex justify-content-center mt-4 ">Choose user and currency for deposition</h3>
+
+<div class='form form-group'>
+<%= simple_form_for :deposit do |f| %>
+  <div class='form-group'>
+    <label for='identify_number'>Identify number</label>
+    <%= f.input :identify_number, label: false, class: 'form-control' %>
+  </div>
+
+ <label for='identify_number'>Currency</label>
+   <%= f.input :currency , label: false, class: 'form-control' do %>
+     <%= f.select :currency, CURRENCY %>
+   <% end %>
+
+  <div class='form-group'>
+    <label for='amount'>Amount</label>
+    <%= f.input :amount,  label: false, class: 'form-control',  as: :numeric%>
+  </div>
+
+  <%= f.button :submit, 'Deposit', class: 'btn btn-outline-info btn-sm mt-3' %>
+<% end %>
+</div>

@@ -1,0 +1,13 @@
+<h2 class="d-flex justify-content-center mt-4 mb-3">Creating new report</h2>
+
+<div class='form form-group'>
+<%= simple_form_for :report do |f| %>
+
+   <label for='identify_number'>Currency</label>
+   <%= f.input :report , label: false, class: 'form-control' do %>
+     <%= f.select :report, @report_types.keys %>
+   <% end %>
+
+  <%= f.button :submit, 'Submit', class: 'btn btn-outline-info btn-sm mt-3' %>
+<% end %>
+</div>

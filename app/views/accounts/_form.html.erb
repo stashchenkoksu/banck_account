@@ -1,0 +1,14 @@
+<div class="form form-group">
+  <%= simple_form_for [@user, @account] do |f| %>
+    <label for='identify_number'>Currency</label>
+         <%= f.input :currency , label: false, class: 'form-control' do %>
+           <%= f.select :currency, CURRENCY %>
+    <% end %>
+    <div class="form-group">
+      <label for="Start amount">Deposit sum</label>
+      <%= f.input :amount, label: false, class: 'form-control', placeholder: "Deposit sum" %>
+    </div>
+
+    <%= f.button :submit, class: 'btn btn-outline-info btn-sm mt-3' %>
+  <% end %>
+</div>

@@ -1,0 +1,30 @@
+<div class="form form-group">
+  <%= simple_form_for @user do |f| %>
+    <div class="form-group">
+      <label for="form_first_name">First name</label>
+      <%= f.input :first_name, label: false, class: 'form-control', placeholder: "First name" %>
+    </div>
+
+    <div class="form-group">
+      <label for="form_middle_name">Middle name</label>
+      <%= f.input :middle_name, label: false, class: 'form-control', placeholder: "Middle name" %>
+    </div>
+
+    <div class="form-group">
+      <label for="form_last_name">Last name</label>
+      <%= f.input :last_name, label: false, class: 'form-control', placeholder: "Last name" %>
+    </div>
+
+    <div class="form-group">
+      <label for="identify_number">Identify number</label>
+      <%= f.input :identify_number, label: false, class: 'form-control', placeholder: "Identify number" %>
+    </div>
+
+    <div class="form-group col">
+          <label>Tags</label>
+          <%= f.association :tags, collection:  @tags, input_html: { multiple: true }, label: false, class: 'form-control'  %>
+    </div>
+
+    <%= f.button :submit, class: 'btn btn-outline-info btn-sm mt-3' %>
+  <% end %>
+</div>

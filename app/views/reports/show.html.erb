@@ -1,0 +1,12 @@
+<h2 class="d-flex justify-content-center mt-4 ">REPORT</h2>
+ <% case @type %>
+   <% when '1'%>
+     <%='About the amount of deposits for a period of time'%>
+     <%= render partial: 'deposition_amount' %>
+   <%  when '2'%>
+      <%='Average, maximum and minimum amount of transfers'%>
+      <%= render partial: 'extremums'%>
+   <% when '3'%>
+      <%='The sum of all accounts at the current time'%>
+      <%= render partial: 'all_accounts_sum' %>
+  <% end %>

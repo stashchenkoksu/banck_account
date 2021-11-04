@@ -1,0 +1,9 @@
+<div class="form form-group">
+  <%= simple_form_for @tag do |f| %>
+    <div class="form-group">
+      <label>Title</label>
+      <%= f.input :title, label: false, class: 'form-control', placeholder: "title" %>
+    </div>
+    <%= f.button :submit, class: 'btn btn-outline-info btn-sm mt-3' %>
+  <% end %>
+</div>
