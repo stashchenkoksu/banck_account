@@ -8,5 +8,6 @@
 
   <dt class='col-sm-2'>Account id:</dt>
   <dd class='col-sm-1'><%= account.id%></dd>
+  <dd class='col-sm-2'> <%= link_to "Delete", user_account_path(account.user, account), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-outline-danger btn-sm' %> </dd>
   <dd></dd>
 </dl>

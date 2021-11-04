@@ -33,3 +33,4 @@ This app should be running at `http://localhost:3000/`
 1. Users (To see all users and accounts, create users, edit users)
 2. Account manager(Make transaction and depositions)
 3. Statistic (Get all reports)
+3. Tags (Get all tags)
